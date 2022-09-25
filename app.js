@@ -5,8 +5,9 @@ const totalSlides = slides.length;
 const bodyColor = document.querySelector("body");
 slideNum.textContent = `${slidePosition + 1}`;
 bodyColor.style.animation = "backgroundslide0 forwards";
-document.querySelector("body").addEventListener("mouseenter", resume);
 
+document.querySelector("body").addEventListener("mouseenter", resume);
+document.querySelector("body").addEventListener("mouseleave", pause);
 document.querySelector(".carousel").addEventListener("mouseenter", pause);
 document.querySelector(".carousel").addEventListener("mouseleave", resume);
 
