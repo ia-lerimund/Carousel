@@ -1,0 +1,101 @@
+body {
+	display: flex;
+	align-items: center;
+}
+.carousel {
+	max-width: 600px;
+	position: relative;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+	display: none;
+}
+.carousel .carousel-item-visible {
+	display: block;
+	animation: fadeVisibility 0.5s;
+}
+.carousel .carousel-item img {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	border: 2px solid white;
+	border-radius: 15px;
+}
+.carousel .carousel-actions {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-150%);
+}
+.carousel .carousel-actions button:active {
+	background: white;
+	color: black;
+}
+.carousel .carousel-actions button {
+	border-radius: 50px;
+	background-color: rgba(255, 255, 255, 0.275);
+	border: 0;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	color: white;
+}
+.carousel .carousel-actions button#carousel-button-prev {
+	margin-left: 20px;
+}
+.carousel .carousel-actions button#carousel-button-next {
+	margin-right: 20px;
+}
+p {
+	margin: 2em auto;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: white;
+	text-shadow: 0 0 0.5px black;
+}
+#slideNum {
+	font-size: 1.5em;
+	margin-left: 0.2em;
+}
+
+@keyframes fadeVisibility {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes backgroundslide0 {
+	0% {
+		background: white;
+	}
+	100% {
+		background: rgba(215, 142, 17, 0.804);
+	}
+}
+@keyframes backgroundslide1 {
+	0% {
+		background: white;
+	}
+	100% {
+		background: rgba(240, 83, 126, 0.804);
+	}
+}
+@keyframes backgroundslide2 {
+	0% {
+		background: white;
+	}
+	100% {
+		background: rgba(29, 65, 63, 0.804);
+	}
+}
